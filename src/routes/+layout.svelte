@@ -18,17 +18,18 @@
 
 <style>
 	:global(body) {
-		background-color: rgb(217, 223, 229);
+		background-color: rgba(204, 215, 227, 1);
 	}
-	h1 {
+	:global(h1) {
 		text-align: center;
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 		font-size: 60px;
 		color: rgba(33, 33, 59,1);
+	
 	}
 	div {
 		margin: 20px;
 		padding: 10px;
-		background-color: rgb(177, 177, 193);
+		background-color: rgba(166, 166, 194, 1);
 	}
 </style>
