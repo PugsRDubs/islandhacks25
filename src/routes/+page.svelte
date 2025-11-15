@@ -1,23 +1,20 @@
 <script lang="ts">
-    import type { TimerData } from "./Timer.svelte";
-    import Timer from "./Timer.svelte";
+    import Class from "./Class.svelte";
 
-    var timers : Array<TimerData> = $state([]);
+    let classes : Array<String> = $state([])
 
-    function a() {
-        timers.push({ name: "Timer", time: 10, hidden: true});
+    let classInput = $state("");
+
+    function addClass() {
+        classes.push(classInput);
+        classInput = ""
     }
-
-    function flip(bool : Boolean) {
-        bool = !bool
-    }
+    
 </script>
 
-<h1 id="sub">Tuff ahh timer</h1>
-<button onclick={a}>abcd</button>
-<h1 id="sub">Problems:</h1>
-<ul>
-    {#each timers as timer, i}
-        <Timer {timer} />
-    {/each}
-</ul>
+<h1>Tuff ahh timer</h1>
+<input bind:value={classInput} type="text">
+<button onclick={addClass}>Add class</button>
+{#each classes as name}
+    <Class {name} />
+{/each}
