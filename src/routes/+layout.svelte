@@ -8,4 +8,27 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children()}
+<div>
+	<h1>Awesome Project</h1>
+</div>
+<div>
+	{@render children()}
+</div>
+
+
+<style>
+	:global(body) {
+		background-color: rgb(217, 223, 229);
+	}
+	h1 {
+		text-align: center;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-size: 60px;
+		color: rgb(33, 33, 59);
+	}
+	div {
+		margin: 20px;
+		padding: 10px;
+		background-color: rgb(177, 177, 193);
+	}
+</style>
