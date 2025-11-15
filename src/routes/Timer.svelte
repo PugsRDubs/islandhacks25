@@ -56,3 +56,9 @@
 {/if}
 <button onclick={destroyTimer}>Finished</button>
 <br>
+
+<style>
+    button {
+        margin-top: 10px;
+    }
+</style>

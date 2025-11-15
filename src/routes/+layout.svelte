@@ -8,27 +8,39 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<h1>Chips</h1>
+<div class ="center">
+	<div class="main">
+		<h1>Chips</h1>
 
-{@render children()}
+		{@render children()}
+	</div>
+</div>
+
+
 
 
 <style>
 	:global(body) {
 		background-color: rgba(34, 39, 46, 1);
-		text-align: center;
 		color:white
 	}
 	h1{
+		margin-top: 0px;
 		text-align: center;
 		font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 		font-size: 60px;
 		color: rgba(235, 235, 243, 0.85);
 	}
-	div {
+	.center {
+		display: flex;
+		justify-content: center;
+	}
+	.main {
+		width: 800px;
 		margin: 40px;
+		padding: 40px;
 		background-color: rgb(45, 47, 50);
-		border-style: solid;
+		border-style: none;
 		border-width: 5px;
 		border-radius: 5px;
 		border-color:rgb(70, 70, 72);

@@ -43,6 +43,7 @@
 <span>:</span>
 <input bind:value={taskMinutes} type="number" placeholder="MM" min="0" max="59">
 <button onclick={add_timer}>Add task</button>
+<br>
 
 {#each timers as timer, i}
     <Timer {timer} destroyTimer={() => timers.splice(i, 1)} />
