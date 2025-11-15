@@ -20,7 +20,7 @@
 	:global(body) {
 		background-color: rgba(204, 215, 227, 1);
 	}
-	:global(h1) {
+	h1{
 		text-align: center;
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 		font-size: 60px;
