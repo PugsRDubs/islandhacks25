@@ -1,11 +1,8 @@
 <script lang="ts">
-    interface Timer {
-        name: string;
-        time: number;
-        hidden: Boolean;
-    }
+    import type { TimerData } from "./Timer.svelte";
+    import Timer from "./Timer.svelte";
 
-    var timers : Array<Timer> = $state([]);
+    var timers : Array<TimerData> = $state([]);
 
     function a() {
         timers.push({ name: "Timer", time: 10, hidden: true});
@@ -21,10 +18,6 @@
 <h1>Problems:</h1>
 <ul>
     {#each timers as timer, i}
-        <li>timer</li>
-        <button onclick={() => timers[i].hidden = !timer.hidden}>{#if timer.hidden}show{:else}hide{/if}</button>
-        {#if !timer.hidden}
-            <p>{timer.time}</p>
-        {/if}
+        <Timer {timer} />
     {/each}
 </ul>
