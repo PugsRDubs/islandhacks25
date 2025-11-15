@@ -1,16 +1,24 @@
 <script lang="ts">
-    var timers : Array<String> = $state([]);
+    var timers : Array<Boolean> = $state([]);
 
     function a() {
-        timers.push("a");
+        timers.push(false);
+    }
+
+    function flip(bool : Boolean) {
+        bool = !bool
     }
 </script>
 
 <h1>Tuff ahh timer</h1>
+<button onclick={a}>abcd</button>
 <h1>Problems:</h1>
 <ul>
-    {#each timers as timer}
-        <li>{timer}</li>
+    {#each timers as timer, i}
+        <li>timer</li>
+        <button onclick={() => timers[i] = !timer}>{#if timer}hide{:else}show{/if}</button>
+        {#if timer}
+            <p>hey</p>
+        {/if}
     {/each}
 </ul>
-<button onclick={a}>abcd</button>
