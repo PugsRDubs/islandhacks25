@@ -7,7 +7,9 @@
 </script>
 
 <script lang="ts">
-    let { timer } = $props();
+    import { slide } from "svelte/transition";
+
+    let { timer, destroyTimer } = $props();
 
     let seconds: number = $state(timer.time);
 
@@ -21,6 +23,9 @@
         }
         if (counting) {
             seconds -= 1;
+        }
+        if (seconds == 0) {
+            alert(`Time is up!`);
         }
     };
 
@@ -38,17 +43,43 @@
         counting=false; 
         seconds=timer.time;
     }
+
+    function getSeconds(s: number) {
+        if (isNaN(seconds) || seconds < 0) return '00:00:00';
+
+        let minuteTime = Math.floor(s / 60);
+        let hourTime = Math.floor(minuteTime / 60);
+
+        s %= 60;
+        minuteTime %= 60;
+
+        return (
+            `${hourTime.toString().padStart(2, '0')}:` +
+            `${minuteTime.toString().padStart(2, '0')}:` +
+            `${s.toString().padStart(2, '0')}`
+        );
+    };
     
 </script>
 
-<button onclick={() => timerClicked()}>{#if counting}pause{:else}start{/if}</button>
-<button onclick={() => timer.hidden = !timer.hidden}>{#if timer.hidden}show{:else}hide{/if}</button>
-{#if seconds != timer.time || counting}
-<button onclick={reset}>reset</button>
-{/if}
-{#if !timer.hidden}
-    <p>{seconds}</p>
-{/if}
-<br>
+<div transition:slide>
+    <span>{timer.name} - </span>
+    <span>{getSeconds(seconds)}</span>
+    <button onclick={() => timerClicked()}>{#if counting}pause{:else}start{/if}</button>
+    <button onclick={() => timer.hidden = !timer.hidden}>{#if timer.hidden}show{:else}hide{/if}</button>
+    {#if seconds != timer.time || counting}
+    <button onclick={reset}>reset</button>
+    {/if}
+    
+    {#if !timer.hidden}
+        extra info
+    {/if}
+    <button onclick={destroyTimer}>Finished</button>
+    <br>
+</div>
 
-<style></style>
+<style>
+    button {
+        margin-top: 10px;
+    }
+</style>

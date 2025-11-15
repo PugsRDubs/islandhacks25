@@ -6,15 +6,22 @@
     let classInput = $state("");
 
     function addClass() {
-        classes.push(classInput);
-        classInput = ""
+        if (classInput == "") {
+            alert(`Name the class!`);
+        }
+        else {
+            classes.push(classInput);
+            classInput = "";
+        }
     }
     
 </script>
 
-<h1>Tuff ahh timer</h1>
-<input bind:value={classInput} type="text">
-<button onclick={addClass}>Add class</button>
+
 {#each classes as name}
-    <Class {name} />
+    <Class {name}/>
 {/each}
+
+<h1>Add a class</h1>
+<input bind:value={classInput} type="text" placeholder="Enter class...">
+<button onclick={addClass}>Add class</button>
