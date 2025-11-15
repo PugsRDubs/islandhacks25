@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { TimerData } from "./Timer.svelte";
     import Timer from "./Timer.svelte";
+    import { slide } from "svelte/transition";
 
     let { name } = $props();
 
@@ -33,9 +34,9 @@
     }
 </script>
 
-<div>
+<div transition:slide>
     <h1>{name}</h1>
-</div>
+
 
 
 <input bind:value={taskName} type="text" placeholder="task name">
@@ -43,8 +44,18 @@
 <span>:</span>
 <input bind:value={taskMinutes} type="number" placeholder="MM" min="0" max="59">
 <button onclick={add_timer}>Add task</button>
-<br>
 
 {#each timers as timer, i}
     <Timer {timer} destroyTimer={() => timers.splice(i, 1)} />
 {/each}
+
+</div>
+
+<style>
+    div {
+        background-color: rgba(240, 248, 255, 0.058);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+</style>

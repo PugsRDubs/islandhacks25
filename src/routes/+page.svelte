@@ -19,10 +19,8 @@
 
 
 {#each classes as name}
-    <Class {name} />
+    <Class {name}/>
 {/each}
-
-<hr>
 
 <h1>Add a class</h1>
 <input bind:value={classInput} type="text" placeholder="Enter class...">

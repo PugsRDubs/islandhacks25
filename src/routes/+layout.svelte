@@ -46,12 +46,6 @@
 		border-color:rgb(70, 70, 72);
 
 	}
-	:global(hr) {
-		border-style: solid;
-		border-width: 2.5px;
-		margin: 20px;
-		border-color:rgb(70, 70, 72);
-	}
 	:global(input, button) {
 		border-style: none;
 		background-color: rgb(70, 74, 80);
