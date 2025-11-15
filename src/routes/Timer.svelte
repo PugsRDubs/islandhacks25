@@ -15,3 +15,5 @@
 {#if !timer.hidden}
     <p>{timer.time}</p>
 {/if}
+
+<style></style>
