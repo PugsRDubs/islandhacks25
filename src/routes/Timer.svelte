@@ -49,5 +49,6 @@
 {#if !timer.hidden}
     <p>{seconds}</p>
 {/if}
+<br>
 
 <style></style>
