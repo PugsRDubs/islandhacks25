@@ -24,6 +24,9 @@
             }
             else {
                 timers.push({ name: taskName, time: fullTime, hidden: true});
+                taskName = "";
+                taskHours = 0;
+                taskMinutes = 0;
             }
         }
         
@@ -41,8 +44,6 @@
 <input bind:value={taskMinutes} type="number" placeholder="MM" min="0" max="59">
 <button onclick={add_timer}>Add task</button>
 
-<ul>
-    {#each timers as timer, i}
-        <Timer {timer} />
-    {/each}
-</ul>
+{#each timers as timer, i}
+    <Timer {timer} destroyTimer={() => timers.splice(i, 1)} />
+{/each}

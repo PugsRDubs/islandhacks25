@@ -17,9 +17,13 @@
     
 </script>
 
-<h1>Active Timers + Classes</h1>
-<input bind:value={classInput} type="text" placeholder="Enter class...">
-<button onclick={addClass}>Add class</button>
+<h1>Active Tasks + Classes</h1>
+
 {#each classes as name}
     <Class {name} />
 {/each}
+
+<hr>
+
+<input bind:value={classInput} type="text" placeholder="Enter class...">
+<button onclick={addClass}>Add class</button>

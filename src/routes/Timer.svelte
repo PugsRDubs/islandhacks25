@@ -7,7 +7,7 @@
 </script>
 
 <script lang="ts">
-    let { timer } = $props();
+    let { timer, destroyTimer } = $props();
 
     let seconds: number = $state(timer.time);
 
@@ -54,4 +54,5 @@
 {#if !timer.hidden}
     extra info
 {/if}
+<button onclick={destroyTimer}>Finished</button>
 <br>
