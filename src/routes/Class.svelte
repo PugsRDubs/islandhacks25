@@ -2,6 +2,8 @@
     import type { TimerData } from "./Timer.svelte";
     import Timer from "./Timer.svelte";
 
+    let { name } = $props();
+
     var timers : Array<TimerData> = $state([]);
 
     function a() {
@@ -9,7 +11,7 @@
     }
 </script>
 
-<h1>English</h1>
+<h1>{name}</h1>
 <button onclick={a}>abcd</button>
 <ul>
     {#each timers as timer, i}
