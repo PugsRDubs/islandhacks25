@@ -22,6 +22,9 @@
         if (counting) {
             seconds -= 1;
         }
+        if (seconds == 0) {
+            alert(`Time is up!`);
+        }
     };
 
     function timerClicked() {
@@ -46,9 +49,8 @@
 {#if seconds != timer.time || counting}
 <button onclick={reset}>reset</button>
 {/if}
+<span>{seconds}</span>
 {#if !timer.hidden}
-    <p>{seconds}</p>
+    extra info
 {/if}
 <br>
-
-<style></style>
