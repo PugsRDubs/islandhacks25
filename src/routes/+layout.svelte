@@ -30,7 +30,8 @@
 	}
 	div {
 		margin: 40px;
-		background-color: rgb(45, 47, 50);
+		padding-bottom: 40px;
+		background-color: rgb(84, 90, 100);
 		border-style: solid;
 		border-width: 5px;
 		border-radius: 5px;
