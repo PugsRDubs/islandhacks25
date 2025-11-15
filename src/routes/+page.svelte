@@ -1,8 +1,14 @@
 <script lang="ts">
-    var timers : Array<Boolean> = $state([]);
+    interface Timer {
+        name: string;
+        time: number;
+        hidden: Boolean;
+    }
+
+    var timers : Array<Timer> = $state([]);
 
     function a() {
-        timers.push(false);
+        timers.push({ name: "Timer", time: 10, hidden: true});
     }
 
     function flip(bool : Boolean) {
@@ -16,9 +22,9 @@
 <ul>
     {#each timers as timer, i}
         <li>timer</li>
-        <button onclick={() => timers[i] = !timer}>{#if timer}hide{:else}show{/if}</button>
-        {#if timer}
-            <p>hey</p>
+        <button onclick={() => timers[i].hidden = !timer.hidden}>{#if timer.hidden}show{:else}hide{/if}</button>
+        {#if !timer.hidden}
+            <p>{timer.time}</p>
         {/if}
     {/each}
 </ul>
