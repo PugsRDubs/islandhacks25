@@ -18,7 +18,7 @@
 
 <style>
 	:global(body) {
-		background-color: rgb(45, 47, 50);
+		background-color: rgba(34, 39, 46, 1);
 		text-align: center;
 		color:white
 	}
@@ -28,21 +28,13 @@
 		font-size: 60px;
 		color: rgba(235, 235, 243, 0.85);
 	}
-	:global(div) {
+	div {
 		margin: 40px;
-		padding-bottom: 40px;
 		background-color: rgb(45, 47, 50);
 		border-style: solid;
 		border-width: 5px;
 		border-radius: 5px;
 		border-color:rgb(70, 70, 72);
 
-	}
-	:global(input, button) {
-		border-style: none;
-		background-color: rgb(70, 74, 80);
-		color: rgba(235, 235, 243, 0.85);
-		padding: 10px;
-		border-radius: 10px;
 	}
 </style>
