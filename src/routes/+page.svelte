@@ -13,9 +13,9 @@
     }
 </script>
 
-<h1>Tuff ahh timer</h1>
+<h1 id="sub">Tuff ahh timer</h1>
 <button onclick={a}>abcd</button>
-<h1>Problems:</h1>
+<h1 id="sub">Problems:</h1>
 <ul>
     {#each timers as timer, i}
         <Timer {timer} />
