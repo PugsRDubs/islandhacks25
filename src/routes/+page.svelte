@@ -6,8 +6,13 @@
     let classInput = $state("");
 
     function addClass() {
-        classes.push(classInput);
-        classInput = ""
+        if (classInput == "") {
+            alert(`Name the class!`);
+        }
+        else {
+            classes.push(classInput);
+            classInput = "";
+        }
     }
     
 </script>
