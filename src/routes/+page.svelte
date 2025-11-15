@@ -12,7 +12,7 @@
     
 </script>
 
-<h1>Tuff ahh timer</h1>
+<h1>Active Timers + Classes</h1>
 <input bind:value={classInput} type="text">
 <button onclick={addClass}>Add class</button>
 {#each classes as name}
