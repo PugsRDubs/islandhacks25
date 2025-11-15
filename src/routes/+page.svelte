@@ -17,14 +17,13 @@
     
 </script>
 
-<h1>Add a class</h1>
-<input bind:value={classInput} type="text" placeholder="Enter class...">
-<button onclick={addClass}>Add class</button>
+
 {#each classes as name}
     <Class {name} />
 {/each}
 
 <hr>
 
+<h1>Add a class</h1>
 <input bind:value={classInput} type="text" placeholder="Enter class...">
 <button onclick={addClass}>Add class</button>
