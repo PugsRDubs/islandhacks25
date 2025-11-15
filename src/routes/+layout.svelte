@@ -9,7 +9,7 @@
 </svelte:head>
 
 <div>
-	<h1>Awesome Project</h1>
+	<h1>Chips</h1>
 </div>
 <div>
 	{@render children()}
