@@ -28,7 +28,7 @@
 		font-size: 60px;
 		color: rgba(235, 235, 243, 0.85);
 	}
-	div {
+	:global(div) {
 		margin: 40px;
 		padding-bottom: 40px;
 		background-color: rgb(45, 47, 50);

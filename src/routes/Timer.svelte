@@ -44,6 +44,7 @@
     
 </script>
 
+<span>{timer.name}</span>
 <button onclick={() => timerClicked()}>{#if counting}pause{:else}start{/if}</button>
 <button onclick={() => timer.hidden = !timer.hidden}>{#if timer.hidden}show{:else}hide{/if}</button>
 {#if seconds != timer.time || counting}
