@@ -8,17 +8,13 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div>
-	<h1>Chips</h1>
-</div>
-<div>
+
 	{@render children()}
-</div>
 
 
 <style>
 	:global(body) {
-		background-color: rgb(45, 47, 50);
+		background-color: rgba(34, 39, 46, 1);
 		text-align: center;
 		color:white
 	}
@@ -28,9 +24,8 @@
 		font-size: 60px;
 		color: rgba(235, 235, 243, 0.85);
 	}
-	:global(div) {
+	div {
 		margin: 40px;
-		padding-bottom: 40px;
 		background-color: rgb(45, 47, 50);
 		border-style: solid;
 		border-width: 5px;
