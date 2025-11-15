@@ -18,7 +18,7 @@
 
 <style>
 	:global(body) {
-		background-color: rgba(213, 217, 222, 1);
+		background-color: rgba(213, 213, 213, 1);
 	}
 	h1{
 		text-align: center;
@@ -30,7 +30,7 @@
 	div {
 		margin: 20px;
 		padding: 10px;
-		background-color: rgba(176, 176, 194, 1);
+		background-color: rgba(178, 178, 194, 1);
 
 	}
 </style>
