@@ -8,12 +8,8 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div>
-	<h1>Chips</h1>
-</div>
-<div>
+
 	{@render children()}
-</div>
 
 
 <style>
