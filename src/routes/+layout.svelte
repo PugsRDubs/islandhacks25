@@ -24,7 +24,7 @@
 		text-align: center;
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 		font-size: 60px;
-		color: rgb(33, 33, 59);
+		color: rgba(0, 0, 255, 1);
 	}
 	div {
 		margin: 20px;
