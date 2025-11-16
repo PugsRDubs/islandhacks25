@@ -24,7 +24,7 @@
                 alert(`Invalid time!`);
             }
             else {
-                timers.push({ name: taskName, time: fullTime, hidden: true});
+                timers.push({ name: taskName, time: fullTime});
                 taskName = "";
                 taskHours = 0;
                 taskMinutes = 0;
@@ -43,6 +43,7 @@
 <input bind:value={taskHours} type="number" placeholder="HH" min="0" max="23">
 <span>:</span>
 <input bind:value={taskMinutes} type="number" placeholder="MM" min="0" max="59">
+<input type="date">
 <button onclick={add_timer}>Add task</button>
 
 {#each timers as timer, i}

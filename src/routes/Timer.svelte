@@ -2,7 +2,6 @@
     export type TimerData = {
         name: string;
         time: number;
-        hidden: Boolean;
     };
 </script>
 
@@ -72,14 +71,10 @@
             {timer.name} - {getSeconds(seconds)}
         {/if}
     </button>
-    <button onclick={() => timer.hidden = !timer.hidden}>{#if timer.hidden}show{:else}hide{/if}</button>
     {#if seconds != timer.time || counting}
     <button onclick={reset}>reset</button>
     {/if}
     
-    {#if !timer.hidden}
-        extra info
-    {/if}
     <button onclick={destroyTimer}>Finished</button>
     <br>
 </div>
