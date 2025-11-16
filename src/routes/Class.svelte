@@ -3,7 +3,7 @@
     import Timer from "./Timer.svelte";
     import { slide } from "svelte/transition";
 
-    let { name } = $props();
+    let { name, color } = $props();
 
     let timers : Array<TimerData> = $state([]);
 
@@ -34,7 +34,7 @@
     }
 </script>
 
-<div transition:slide>
+<div transition:slide style="--color: {color}">
     <h1>{name}</h1>
 
 
@@ -53,7 +53,7 @@
 
 <style>
     div {
-        background-color: rgba(240, 248, 255, 0.058);
+        background-color: var(--color);
         padding: 20px;
         border-radius: 10px;
         margin-bottom: 20px;

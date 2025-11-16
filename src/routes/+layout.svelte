@@ -21,15 +21,17 @@
 
 <style>
 	:global(body) {
-		background-color: rgba(34, 39, 46, 1);
-		color:white
+		background-color: rgb(237, 233, 216);
 	}
 	h1{
 		margin-top: 0px;
 		text-align: center;
 		font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 		font-size: 60px;
-		color: rgba(235, 235, 243, 0.85);
+		color: rgb(58, 58, 67);
+	}
+	:global(h1, span, input, button) {
+		color: rgb(80, 76, 68);
 	}
 	.center {
 		display: flex;
@@ -39,17 +41,16 @@
 		width: 800px;
 		margin: 40px;
 		padding: 40px;
-		background-color: rgb(45, 47, 50);
+		background-color: rgb(214, 212, 198);
 		border-style: none;
 		border-width: 5px;
 		border-radius: 5px;
 		border-color:rgb(70, 70, 72);
 
 	}
-	:global(input, button) {
+	:global(input, button, select, option) {
 		border-style: none;
-		background-color: rgb(70, 74, 80);
-		color: rgba(235, 235, 243, 0.85);
+		background-color: rgba(214, 212, 198, 0.567);
 		padding: 10px;
 		border-radius: 10px;
 	}

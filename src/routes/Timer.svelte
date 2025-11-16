@@ -63,9 +63,15 @@
 </script>
 
 <div transition:slide>
-    <span>{timer.name} - </span>
-    <span>{getSeconds(seconds)}</span>
-    <button onclick={() => timerClicked()}>{#if counting}pause{:else}start{/if}</button>
+    <button onclick={() => timerClicked()}>
+        {#if counting}
+            <strong>
+                {timer.name} - {getSeconds(seconds)}
+            </strong>
+        {:else}
+            {timer.name} - {getSeconds(seconds)}
+        {/if}
+    </button>
     <button onclick={() => timer.hidden = !timer.hidden}>{#if timer.hidden}show{:else}hide{/if}</button>
     {#if seconds != timer.time || counting}
     <button onclick={reset}>reset</button>
