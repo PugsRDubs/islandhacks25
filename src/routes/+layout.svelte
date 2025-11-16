@@ -11,7 +11,7 @@
 <div class ="center">
 	<div class="main">
 		<h1>Chips</h1>
-		<h4>"Chipping" away at your tasks</h4>
+		<p><strong>"Chipping" away at your tasks</strong></p>
 		<p>To begin with this task tracker, make a class first. Choose a color and name for the class that you have tasks to complete. Then, add a task with a name, duration and due date. Finally, start tracking by clicking the duration ticker!</p>
 		{@render children()}
 	</div>
