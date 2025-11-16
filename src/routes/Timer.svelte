@@ -8,6 +8,8 @@
 <script lang="ts">
     import { slide } from "svelte/transition";
 
+    const audio = new Audio('/ringtone.mp3');
+
     let { timer, destroyTimer } = $props();
 
     let seconds: number = $state(timer.time);
@@ -26,7 +28,9 @@
             seconds -= 1;
         }
         if (seconds == 0) {
+            audio.play();
             alert(`Time is up!`);
+            
         }
     };
 
