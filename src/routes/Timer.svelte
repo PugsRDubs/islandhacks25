@@ -6,7 +6,7 @@
 </script>
 
 <script lang="ts">
-    import { slide } from "svelte/transition";
+    import { fade, slide } from "svelte/transition";
 
     const audio = new Audio('/ringtone.mp3');
 
@@ -79,16 +79,19 @@
             {timer.name} - {getSeconds(seconds)}
         {/if}
     </button>
-    {#if seconds != timer.time || counting}
-    <button onclick={reset}>reset</button>
-    {/if}
-    
     <button onclick={destroyTimer}>Finished</button>
+    {#if seconds != timer.time || counting}
+    <button transition:fade onclick={reset}>reset</button>
+    <meter transition:fade value={timer.time - seconds} max={timer.time}></meter>
+    {/if}
     <br>
 </div>
 
 <style>
     button {
         margin-top: 10px;
+    }
+    meter {
+        width: 50%;
     }
 </style>
