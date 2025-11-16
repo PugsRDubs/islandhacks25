@@ -24,12 +24,14 @@
 	:global(body) {
 		background-color: rgb(237, 233, 216);
 	}
-	h1, h4{
+	h1, h4 {
 		margin-top: 0px;
 		text-align: center;
-		font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 		font-size: 60px;
 		color: rgb(58, 58, 67);
+		font-family: "Modak", system-ui;
+		font-weight: 400;
+		font-style: normal;
 	}
 	:global(h1, span, input, button) {
 		color: rgb(80, 76, 68);
@@ -54,5 +56,12 @@
 		background-color: rgba(214, 212, 198, 0.567);
 		padding: 10px;
 		border-radius: 10px;
+		
+	}
+	:global(input, button, select, option, p, h1) {
+		font-family: "Stack Sans Text", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
 	}
 </style>
