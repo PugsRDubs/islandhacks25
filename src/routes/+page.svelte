@@ -30,9 +30,6 @@
 <select bind:value={classColor} name="color" id="">
     <option selected value="#8d9b88">Green</option>
     <option value="#bc9de0">Lavender</option>
-    <option value="#eab775">orange</option>
-    <option value="#90b5ed">blue</option>
-    <option value="red">Red</option>
-    <option value="red">Red</option>
-    <option value="red">Red</option>
+    <option value="#eab775">Orange</option>
+    <option value="#90b5ed">Blue</option>
 </select>
