@@ -10,7 +10,8 @@
 
 <div class ="center">
 	<div class="main">
-		<h1>Task Tracker</h1>
+		<h1>Chips</h1>
+		<h4>"Chipping" away at your tasks</h4>
 		<p>To begin with this task tracker, make a class first. Choose a color and name for the class that you have tasks to complete. Then, add a task with a name, duration and due date. Finally, start tracking by clicking the duration ticker!</p>
 		{@render children()}
 	</div>
@@ -23,7 +24,7 @@
 	:global(body) {
 		background-color: rgb(237, 233, 216);
 	}
-	h1{
+	h1, h4{
 		margin-top: 0px;
 		text-align: center;
 		font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;

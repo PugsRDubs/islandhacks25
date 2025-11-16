@@ -79,7 +79,7 @@
             {timer.name} - {getSeconds(seconds)}
         {/if}
     </button>
-    <button onclick={destroyTimer}>Finished</button>
+    <button onclick={destroyTimer}>Finish</button>
     {#if seconds != timer.time || counting}
     <button transition:fade onclick={reset}>reset</button>
     <meter transition:fade value={timer.time - seconds} max={timer.time}></meter>
