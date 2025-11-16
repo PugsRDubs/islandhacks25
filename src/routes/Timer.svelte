@@ -16,8 +16,6 @@
 
     let counting = $state(false);
 
-    let date = new Date;
-
     const makeIteration = (): void => {
         if (seconds > 1) {
             if (counting) {
@@ -68,8 +66,6 @@
 </script>
 
 <div transition:slide>
-    <button onclick={() => console.log(date.getDate())}>date</button>
-
     <button onclick={() => timerClicked()}>
         {#if counting}
             <strong>
