@@ -35,3 +35,9 @@
     <option value="#93aacf">Blue</option>
     <option value="#ae97c9">Lavender</option>
 </select>
+
+<style>
+    input, button, select, option {
+        background-color: rgb(184, 181, 164);
+    }
+</style>

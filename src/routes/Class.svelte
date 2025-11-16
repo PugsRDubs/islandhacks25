@@ -43,7 +43,7 @@
 <input bind:value={taskHours} type="number" placeholder="HH" min="0" max="23">
 <span>:</span>
 <input bind:value={taskMinutes} type="number" placeholder="MM" min="0" max="59">
-<input type="date">
+
 <button onclick={add_timer}>Add task</button>
 
 {#each timers as timer, i}
