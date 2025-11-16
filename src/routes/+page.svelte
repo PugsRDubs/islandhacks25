@@ -28,8 +28,10 @@
 <input bind:value={classInput} type="text" placeholder="Enter class...">
 <button onclick={addClass}>Add class</button>
 <select bind:value={classColor} name="color" id="">
+    <option value="#cf9999">Red</option>
+    <option value="#dbb079">Orange</option>
+    <option value="#e6c98c">Yellow</option>
     <option selected value="#8d9b88">Green</option>
-    <option value="#bc9de0">Lavender</option>
-    <option value="#eab775">Orange</option>
-    <option value="#90b5ed">Blue</option>
+    <option value="#93aacf">Blue</option>
+    <option value="#ae97c9">Lavender</option>
 </select>
